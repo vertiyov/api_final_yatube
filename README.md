@@ -27,3 +27,39 @@ python3 manage.py migrate
 ```
 python3 manage.py runserver
 ```
+
+Примеры запросов:
+
+##### POST /api/v1/posts/{id}/comments/
+
+Request sample:
+```
+{
+"text": "string"
+}
+``` 
+Response sample:
+```
+{
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "created": "2022-12-17T21:08:10.621235Z",
+    "post": 0
+}
+```
+
+##### GET http://127.0.0.1:8000/api/v1/posts/{id}/
+
+Response sample:
+```
+{
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "pub_date": "2022-12-17T21:08:10.621235Z",
+    "image": "string",
+    "group": 0
+}
+```
+
